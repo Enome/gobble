@@ -1,6 +1,14 @@
-var data = {
+var rimraf = require('rimraf');
+var fs = require('fs');
 
-  dir: __dirname + '/test_dir',
+var specs = {
+
+  dir: __dirname + '/output',
+
+  cleanOutput: function () {
+    rimraf.sync(specs.dir);
+    fs.mkdirSync(specs.dir);
+  },
 
   tasks: [
 
@@ -9,20 +17,20 @@ var data = {
       tasks: [],
       streams: [
         { module: 'gulp.src', code: "['1.txt', '2.txt']", }, 
-        { module: 'gulp-wooza', code: "'combined.txt'", },
+        { module: 'gulp-concat', code: "'combined.txt'", },
         { module: 'gulp.dest', code: "'build/'" }, 
       ]
     },
 
     {
       name: 'tasks',
-      tasks: ['scripts'],
+      tasks: ['streams'],
       streams: []
     },
 
     {
       name: 'both',
-      tasks: ['scripts'],
+      tasks: ['streams', 'tasks'],
       streams: [
         { module: 'gulp.src', code: "['1.txt', '2.txt']", }, 
         { module: 'gulp-concat', code: "'combined.txt'", },
@@ -34,4 +42,4 @@ var data = {
 
 };
 
-module.exports = data;
+module.exports = specs;

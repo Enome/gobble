@@ -1,0 +1,9 @@
+{
+  "name": "Gulp-ui",
+  "main": "index.html",
+  "version": "0.0.0",
+  "window": {
+    "toolbar": true,
+    "title": "Gulp UI"
+  }
+}
