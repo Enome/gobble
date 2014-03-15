@@ -18,7 +18,7 @@ describe('Utils', function () {
     
   });
 
-  describe('collectNpmModules', function () {
+  describe('collectModulesFromTasks', function () {
 
     it('filters the modules from tasks and adds the default gulp modules', function () {
 

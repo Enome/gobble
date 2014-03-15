@@ -1,0 +1,9 @@
+{
+  "name": "Gobble",
+  "main": "index.html",
+  "version": "0.0.0",
+  "window": {
+    "toolbar": true,
+    "title": "Gobble"
+  }
+}

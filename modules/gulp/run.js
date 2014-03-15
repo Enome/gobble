@@ -1,9 +1,10 @@
 var prettyHrtime = require('pretty-hrtime');
 var EventEmitter = require('events').EventEmitter;
+var path = require('path');
 
 var run = function (dir, task) {
 
-  var gulp_file = dir + '/Gulpfile.js';
+  var gulp_file = path.join(dir, 'Gulpfile.js');
   delete require.cache[gulp_file];
 
   var gulp = require(gulp_file);

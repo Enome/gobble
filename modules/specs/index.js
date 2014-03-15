@@ -11,7 +11,6 @@ var specs = {
   },
 
   tasks: [
-
     {
       name: 'streams',
       tasks: [],
@@ -37,8 +36,7 @@ var specs = {
         { module: 'gulp.dest', code: "'build/'" }, 
       ]
     }
-
-  ] 
+  ],
 
 };
 
